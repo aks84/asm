@@ -1,0 +1,66 @@
+Open segments:Microsoft (R) Macro Assembler Version 5.00                  3/25/20 00:53:08
+                                                             Page     1-1
+
+
+
+_TEXT  . . . . . . . . . . . . .  	
+Microsoft (R) Macro Assembler Version 5.00                  3/25/20 00:53:08
+                                                             Page     1-1
+
+
+       1				;program a single character 
+       2				dosseg 
+       3				.modem small 
+one.asm(3): error A2105: Expected: instruction or directive
+       4 0000				.stack 100h 
+one.asm(4): error A2105: Expected: .model
+       5 0100				.stack 100h 
+       6 0000				.data 
+one.asm(5): error A2105: Expected: .model
+       7 0000				.data 
+       8 0000				.code 
+one.asm(6): error A2105: Expected: .model
+       9 0000				.code 
+      10 0000				main proc 
+one.asm(7): error A2062: Missing or unreachable CS
+      11 0000  B2 61			mov dl, 'a' 
+      12 0002  B4 02			mov ah,2 
+      13 0004  CD 21			int 21h 
+      14 0006  B4 4C			mov ah, 4ch 
+      15 0008  CD 21			int 21h 
+      16				 
+      17				 
+      18 000A				main endp 
+      19				end main 
+Open segments:
+_TEXT  . . . . . . . . . . . . .  	
+Microsoft (R) Macro Assembler Version 5.00                  3/25/20 00:53:08
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  STACK  . . . . . . . . . . . .  	0100	PARA	STACK	'STACK'
+  _DATA  . . . . . . . . . . . .  	0000	WORD	PUBLIC	'DATA'
+_TEXT  . . . . . . . . . . . . .  	0000	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	N PROC	0000	_TEXT	Length = 000A
+
+@FILENAME  . . . . . . . . . . .  	TEXT  one		
+
+
+     16 Source  Lines
+     16 Total   Lines
+      9 Symbols
+
+  50688 + 465856 Bytes symbol space free
+
+      0 Warning Errors
+      6 Severe  Errors
